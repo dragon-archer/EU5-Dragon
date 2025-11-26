@@ -100,7 +100,7 @@ REPLACE:high_legitimacy = {
 	pop_leave_rebels_threshold = -0.05
 
 	great_power_score_exempt_from_forfeit = 20 # 10
-	monthly_righteousness = 0.1
+	monthly_righteousness = 0.5
 	monthly_doom = -0.1
 	monthly_towards_absolutism = societal_value_minor_monthly_move
 }

@@ -4,7 +4,7 @@ REPLACE_OR_CREATE:PRU_secondary_capital_tangermunde = {
 		category = location
 	}
 
-	local_proximity_source = 60 # 20
+	local_proximity_source = 80 # 20
 	local_distance_from_capital_cost_modifier = -0.5
 }
 
