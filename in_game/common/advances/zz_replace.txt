@@ -1,0 +1,189 @@
+﻿# Replace
+
+## religion_catholic
+REPLACE:marian_devotion = {
+	age = age_1_traditions
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	stability_investment = small_stability_investment
+
+	requires = res_publica_christiana # roman_orthodoxy
+
+	ai_weight = { add = 10 }
+}
+
+REPLACE:crusading_knights = {
+	age = age_1_traditions
+	icon = feudalism_advance
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	monthly_army_tradition = 0.05
+
+	requires = res_publica_christiana
+}
+
+REPLACE:preaching_friars = {
+	age = age_2_renaissance
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+
+	requires = diplomatic_range_age_1
+}
+
+REPLACE:devotio_moderna = {
+	age = age_2_renaissance
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	court_spending_cost = -0.01
+
+	requires = renaissance_subject_opinions_advance
+}
+
+REPLACE:beguins_and_beghards = {
+	age = age_2_renaissance
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	global_medicaments_output_modifier = 0.1
+
+	requires = devotio_moderna
+}
+
+REPLACE:grand_display_of_faith = {
+	age = age_3_discovery
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	cultural_influence_modifier = 0.1
+
+	requires = print_culture
+}
+
+REPLACE:monastery_productions = {
+	age = age_3_discovery
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	global_clergy_food_consumption = -0.05
+
+	requires = improved_book_binding
+}
+
+REPLACE:reform_church_music = {
+	age = age_3_discovery
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	peasants_estate_target_satisfaction = small_permanent_target_satisfaction
+
+	requires = artists_advance_discovery
+}
+
+REPLACE:mendicant_orders = {
+	age = age_3_discovery
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	global_monthly_prosperity = 0.001
+
+	requires = diplomatic_training
+}
+
+REPLACE:baptism_books = {
+	age = age_4_reformation
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+
+	requires = confessional_court
+}
+
+REPLACE:second_scholasticism = {
+	age = age_5_absolutism
+	icon = scholasticism
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	research_speed_modifier = 0.05
+
+	requires = newspapers_advance
+}
+
+REPLACE:national_churches = {
+	age = age_6_revolutions
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	legislative_efficiency = 0.05
+
+	requires = power_projection_advance_6
+}
+
+REPLACE:entrenched_church = {
+	age = age_6_revolutions
+	icon = cultural_acceptance_advance
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	global_separatism = -0.05
+
+	requires = separation_of_powers
+}
+
+REPLACE:divine_church_music = {
+	age = age_6_revolutions
+
+	potential = {
+		# religion = religion:catholic
+		religion.group = religion_group:christian
+	}
+
+	hire_artist_cost_modifier = -0.025
+
+	requires = artists_advance_revolutions
+}

@@ -1,0 +1,4 @@
+﻿# For tooltip
+num_of_advances_researched_sv = {
+	value = num_of_advances_researched
+}

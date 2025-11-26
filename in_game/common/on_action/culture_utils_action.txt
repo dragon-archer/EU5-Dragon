@@ -1,0 +1,68 @@
+﻿yearly_country_pulse = {
+	on_actions = {
+		sc_yearly_country_pulse
+	}
+}
+
+sc_yearly_country_pulse = {
+	trigger = {
+		num_locations > 0
+	}
+	effect = {
+		every_province = {
+			limit = {
+				province_definition = {
+					NOR = {
+						any_location_in_province_definition = {
+							is_ownable = yes
+							has_owner = no
+						}
+						root ?= { has_colonial_charter_in = prev }
+					}
+				}
+			}
+			every_location_in_province = {
+				limit = {
+					local_religious_unity < 1
+					trigger_if = {
+						limit = { root = { is_ai = yes } }
+						trigger_if = {
+							limit = { exists = prev.var:promoting_religion }
+							dominant_religion = prev.var:promoting_religion
+						}
+						trigger_else = {
+							dominant_religion = owner.religion
+						}
+					}
+				}
+				add_location_modifier = {
+					modifier = spontaneous_conversion_modifier
+					years = 1
+					mode = replace
+					size = sc_conversion_final_scale
+				}
+			}
+			every_location_in_province = {
+				limit = {
+					local_cultural_unity < 1
+					trigger_if = {
+						limit = { root = { is_ai = yes } }
+						trigger_if = {
+							limit = { exists = prev.var:promoting_culture }
+							dominant_culture = prev.var:promoting_culture
+						}
+						trigger_else = {
+							dominant_culture = owner.culture
+						}
+					}
+				}
+				add_location_modifier = {
+					modifier = spontaneous_assimilation_modifier
+					years = 1
+					mode = replace
+					size = sc_assimilation_final_scale
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+﻿
+REPLACE:antagonism_maps_stolen = {
+	value = 1 # 10
+	yearly_decay = 0.2 # 1
+}

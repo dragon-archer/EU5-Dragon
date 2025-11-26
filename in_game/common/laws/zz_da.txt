@@ -1,0 +1,21 @@
+﻿
+INJECT:foreign_cultural_law = {
+	agrarian_constitution = {
+		potential = {
+			OR = {
+				has_or_had_tag = TEU
+				has_or_had_tag = BRA
+				has_or_had_tag = PRU
+			}
+		}
+		country_modifier = {
+			global_estate_target_satisfaction = tiny_permanent_target_satisfaction
+			global_distance_from_capital_cost_modifier = -0.05
+			global_pop_assimilation_speed_modifier = 0.1
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}
+}

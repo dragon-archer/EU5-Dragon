@@ -1,0 +1,101 @@
+﻿REPLACE:spiritualist_vs_humanist = {
+	left_modifier = {
+		global_clergy_city_desired_pop_scaled = 0.02
+		tolerance_own = 2
+
+		global_pop_conversion_speed_modifier = 0.50
+		global_pop_assimilation_speed_modifier = -0.25 # -0.5
+		religious_unity_importance_modifier = 0.2
+		court_language_is_liturgical_language_importance_modifier = 0.25
+		bias_for_scholar_policies = 25
+		bias_for_tolerant_policies = -100
+		antagonism_religion_influence = 0.5
+	}
+	right_modifier = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+
+
+		global_pop_conversion_speed_modifier = -0.25 # -0.50
+		global_pop_assimilation_speed_modifier = 0.5
+		religious_unity_importance_modifier = -0.2
+		court_language_is_liturgical_language_importance_modifier = -0.25
+		bias_for_scholar_policies = 25
+		bias_for_tolerant_policies = 100
+		antagonism_religion_influence = -0.5
+	}
+}
+
+REPLACE:quality_vs_quantity = {
+	left_modifier = {
+		military_tactics = 0.25 # 0.1
+		land_morale_recovery = 0.02
+		discipline = 0.05 #
+
+		army_initiative = 0.25
+		army_maintenance_cost = 0.1
+		bias_for_militarist_policies = 50
+	}
+	right_modifier = {
+		possible_frontage_modifier = 0.25
+		food_consumption_modifier = -0.1
+		global_army_levy_size_modifier = 0.2 #
+
+		army_initiative = -0.25
+		army_maintenance_cost = -0.1
+		bias_for_militarist_policies = 50
+	}
+
+	opinion_importance_multiplier = 0.5
+}
+
+REPLACE:offensive_vs_defensive = {
+	left_modifier = {
+		siege_ability = 0.2 # 0.1
+		assault_ability = 0.2 # 0.1
+
+		global_defensive = -0.5
+		army_movement_speed = 0.1
+		defence_importance_modifier = -0.2
+		bias_for_militarist_policies = 50
+
+		antagonism_declared_war_no_cb_giving_modifier = -0.1
+	}
+	right_modifier = {
+		fort_maintenance_cost = -0.2
+		combat_speed_modifier = 0.1
+
+		global_defensive = 0.3 # 0.5
+		army_movement_speed = -0.1
+		defence_importance_modifier = 0.2
+		bias_for_diplomat_policies = 50
+		fort_limit_modifier = 0.5
+	}
+}
+
+REPLACE:land_vs_naval = {
+	left_modifier = {
+		road_cost_on_distance_from_capital = -4
+		land_cost_on_distance_from_capital = -8
+		land_cost_on_distance_from_capital_modifier = -0.1
+		global_max_rgo_size_modifier = 0.05
+
+		trade_sea_movement_cost_modifier = 0.5
+		trade_land_movement_cost_modifier = -0.1
+
+		bias_for_militarist_policies = 25
+		bias_for_administrative_policies = 25
+	}
+	right_modifier = {
+		sea_cost_on_distance_from_capital_when_maritime = -1
+		global_maritime_presence_modifier = 0.3
+
+		trade_sea_movement_cost_modifier = -0.10
+		trade_land_movement_cost_modifier = 0.5
+
+		bias_for_colonialist_policies = 100
+	}
+
+	opinion_importance_multiplier = 0.1
+}
+

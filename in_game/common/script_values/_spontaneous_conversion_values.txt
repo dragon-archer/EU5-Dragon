@@ -1,0 +1,85 @@
+﻿sc_conversion_final_scale = {
+	value = population # in 1k units
+	multiply = {
+		value = local_religious_unity
+		multiply = {
+			value = 1
+			subtract = {
+				value = local_religious_unity
+				multiply = 0.75
+			}
+		}
+		multiply = 3 # so that at 0.67 unity it's 1x speed
+	}
+
+	divide = {
+		# value = -0.6 # compensate for initial scale
+		every_present_religion_in_location = {
+			add = 0.5
+		}
+	}
+
+	if = {
+		limit = { location_rank = location_rank:rural_settlement }
+		multiply = 0.25
+	}
+	else_if = {
+		limit = { location_rank = location_rank:town }
+		multiply = 0.5
+	}
+
+	multiply = 0.002 # per month base speed
+	min = 0.001
+}
+
+sc_assimilation_final_scale = {
+	value = population # in 1k units
+	multiply = {
+		value = local_cultural_unity
+		multiply = {
+			value = 1
+			subtract = {
+				value = local_cultural_unity
+				multiply = 0.75
+			}
+		}
+		multiply = 3 # so that at 0.67 unity it's 1x speed
+	}
+
+	divide = {
+		# value = -0.6 # compensate for initial scale
+		every_present_culture_in_location = {
+			add = 0.5
+		}
+	}
+
+	if = {
+		limit = { location_rank = location_rank:rural_settlement }
+		multiply = 0.25
+	}
+	else_if = {
+		limit = { location_rank = location_rank:town }
+		multiply = 0.5
+	}
+
+	# multiply = {
+	# 	value = owner.culture.cultural_influence
+	# 	ordered_pop = {
+	# 		limit = {
+	# 			culture != owner.culture
+	# 		}
+	# 		max = 1
+	# 		order_by = culture.cultural_tradition
+	# 		divide = {
+	# 			value = culture.cultural_tradition
+	# 			min = 1
+	# 		}
+	# 	}
+
+	# 	min = 0.5
+	# 	max = 2
+	# }
+
+	multiply = 0.002
+	min = 0.001
+}

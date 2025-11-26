@@ -1,0 +1,20 @@
+﻿da_cb_border_conflict = {
+	visible = {
+		always = yes
+	}
+
+	allow_creation = {
+		societal_value:offensive_vs_defensive < 0
+		societal_value:belligerent_vs_conciliatory < 25
+		scope:target = {
+			is_neighbor_of = root
+		}
+		always = yes
+	}
+
+	province = {
+		always = yes
+	}
+
+	war_goal_type = conquer_province
+}
