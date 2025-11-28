@@ -1,4 +1,57 @@
-﻿REPLACE:spiritualist_vs_humanist = {
+﻿REPLACE:centralization_vs_decentralization = {
+	left_modifier = {
+		global_crown_estate_power = 0.5
+		global_distance_from_capital_cost_modifier = -0.15 # -0.1
+
+		subject_loyalty = -15 # -20
+		counter_espionage = 0.3
+
+		control_importance_modifier = 0.2
+
+	}
+	right_modifier = {
+		global_estate_target_satisfaction = medium_permanent_target_satisfaction
+		global_estate_satisfaction_recovery = 0.002
+
+		subject_loyalty = 30
+		counter_espionage = -0.3
+
+		control_importance_modifier = -0.1
+	}
+
+	opinion_importance_multiplier = 0.5
+}
+
+REPLACE:traditionalist_vs_innovative = {
+	left_modifier = {
+		global_estate_target_satisfaction = small_permanent_target_satisfaction
+		cultural_tradition_modifier = 1.0
+
+
+		stability_cost = -0.20
+		embrace_institution_cost_modifier = 1.0 # 2.0
+
+		language_change_threshold_modifier = 1
+		societal_value_importance_modifier = 0.2
+		institution_importance_modifier = -0.2
+		bias_for_scholar_policies = -100
+	}
+	right_modifier = {
+		global_max_literacy = 10
+		cultural_influence_modifier = 1.0
+
+		stability_cost = 0.10 # 0.20
+		embrace_institution_cost_modifier = -0.5
+
+		language_change_threshold_modifier = -1
+		societal_value_importance_modifier = -0.2
+		institution_importance_modifier = 0.2
+		bias_for_scholar_policies = 100
+	}
+}
+
+
+REPLACE:spiritualist_vs_humanist = {
 	left_modifier = {
 		global_clergy_city_desired_pop_scaled = 0.02
 		tolerance_own = 2
@@ -23,6 +76,66 @@
 		bias_for_scholar_policies = 25
 		bias_for_tolerant_policies = 100
 		antagonism_religion_influence = -0.5
+	}
+}
+
+REPLACE:serfdom_vs_free_subjects = {
+	left_modifier = {
+		global_raw_material_output = 0.10
+		global_supply_limit_modifier = 0.10
+
+		global_peasants_food_consumption = 0.1
+		global_laborers_food_consumption = 0.1
+		peasants_estate_max_tax = 0.2
+		control_importance_modifier = 0.1
+		court_language_is_common_language_importance_modifier = -0.25
+	}
+	right_modifier = {
+		global_monthly_prosperity = 0.0025
+		global_pop_promotion_speed_modifier = 1.0
+		global_max_rgo_size_modifier = 0.10
+
+		global_peasants_food_consumption = -0.1
+		global_laborers_food_consumption = -0.1
+		peasants_estate_max_tax = -0.05 # -0.1
+		control_importance_modifier = -0.05
+		court_language_is_common_language_importance_modifier = 0.25
+	}
+}
+
+REPLACE:belligerent_vs_conciliatory = {
+	left_modifier = {
+		global_war_score_cost = -0.1
+		spy_network_construction = 0.2 # 0.1
+
+		casus_belli_creation_speed_modifier = 0.5 # 0.33
+		shared_border_impact = 1.0 # 2.0
+
+		aggressiveness_modifier = 0.15
+		manpower_importance_modifier = 0.2
+		diplomacy_importance_modifier = -0.1
+		bias_for_militarist_policies = 50
+
+		antagonism_taking_land_giving_modifier = -0.5 #we don't care too much if others take land
+		antagonism_breaking_truce_giving_modifier = -0.2
+		antagonism_declared_war_no_cb_giving_modifier = -0.3
+	}
+	right_modifier = {
+		diplomatic_reputation = diplomatic_reputation_severe_bonus
+		country_cabinet_efficiency = 0.15 # 0.10
+
+		casus_belli_creation_speed_modifier = -0.33
+		shared_border_impact = -0.5 # -0.75
+
+
+		aggressiveness_modifier = -0.15
+		manpower_importance_modifier = -0.2
+		diplomacy_importance_modifier = 0.1
+		bias_for_diplomat_policies = 50
+
+		antagonism_taking_land_giving_modifier = 0.3 #we REALLY care if others take land
+		antagonism_breaking_truce_giving_modifier = 0.2
+		antagonism_declared_war_no_cb_giving_modifier = 0.3
 	}
 }
 
@@ -76,11 +189,10 @@ REPLACE:offensive_vs_defensive = {
 REPLACE:land_vs_naval = {
 	left_modifier = {
 		road_cost_on_distance_from_capital = -4
-		land_cost_on_distance_from_capital = -8
 		land_cost_on_distance_from_capital_modifier = -0.1
 		global_max_rgo_size_modifier = 0.05
 
-		trade_sea_movement_cost_modifier = 0.5
+		trade_sea_movement_cost_modifier = 0.25 # 0.5
 		trade_land_movement_cost_modifier = -0.1
 
 		bias_for_militarist_policies = 25
@@ -91,7 +203,7 @@ REPLACE:land_vs_naval = {
 		global_maritime_presence_modifier = 0.3
 
 		trade_sea_movement_cost_modifier = -0.10
-		trade_land_movement_cost_modifier = 0.5
+		trade_land_movement_cost_modifier = 0.25 # 0.5
 
 		bias_for_colonialist_policies = 100
 	}
@@ -99,3 +211,22 @@ REPLACE:land_vs_naval = {
 	opinion_importance_multiplier = 0.1
 }
 
+REPLACE:individualism_vs_communalism = {
+	left_modifier = {
+		land_morale_modifier = 0.1
+		naval_morale_modifier = 0.1
+
+		global_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
+		global_migration_speed_modifier = 0.5
+		societal_value_importance_modifier = -0.05
+	}
+	right_modifier = {
+		pop_join_rebel_threshold = -0.05
+		revoke_privilege_cost_modifier = -0.5
+
+		global_estate_target_satisfaction = small_permanent_target_satisfaction
+		global_migration_speed_modifier = -0.25 # -0.5
+
+		societal_value_importance_modifier = 0.05
+	}
+}

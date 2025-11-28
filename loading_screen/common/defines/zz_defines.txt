@@ -1,0 +1,7 @@
+﻿NCountry = {
+	MERCHANT_MAINTENANCE_COST = 0.2 # 0.5
+}
+
+NMarket = {
+	MARKET_UPSTREAM_FACTOR = 0.75 # 0.9
+}

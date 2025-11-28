@@ -1,6 +1,8 @@
 ﻿
 INJECT:country_base_values = {
 	prestige_decay = -0.005 # default is 0.01, together is 0.005
+
+	land_cost_going_upstream = -10 # default is 30, together is -10
 }
 
 REPLACE:ruler_has_general_trait = {
