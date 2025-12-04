@@ -12,7 +12,7 @@
 
 	allow = {
 	}
-	
+
 	cooldown = {
 		type = invite_settlers
 		years = 2
@@ -75,7 +75,10 @@
 					divide = 4800 # 0.5% total population over 2 years
 					multiply = {
 						value = scope:target.province_capital.migration_attraction
-						divide = scope:recipient.capital.migration_attraction
+						divide = {
+							value = scope:recipient.capital.migration_attraction
+							min = 0.001 #
+						}
 						min = 0.2
 						max = 3.0
 					}
@@ -84,7 +87,7 @@
 			}
 		}
 	}
-	
+
 	ai_will_do = {
 		#inertia
 		add = -10
