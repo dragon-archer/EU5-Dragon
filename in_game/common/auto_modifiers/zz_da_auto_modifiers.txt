@@ -12,7 +12,7 @@ REPLACE:ruler_has_general_trait = {
 		}
 	}
 
-	# monthly_towards_belligerent = societal_value_monthly_move
+	monthly_towards_belligerent = societal_value_monthly_move
 	monthly_towards_offensive = societal_value_monthly_move
 	monthly_towards_land = societal_value_monthly_move
 }
@@ -24,7 +24,7 @@ REPLACE:ruler_has_admiral_trait = {
 		}
 	}
 
-	# monthly_towards_belligerent = societal_value_monthly_move
+	monthly_towards_belligerent = societal_value_monthly_move
 	monthly_towards_offensive = societal_value_monthly_move
 	monthly_towards_naval = societal_value_monthly_move
 }

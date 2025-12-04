@@ -1,4 +1,16 @@
-﻿
+﻿INJECT:precious_metal_distribution_law = {
+	regulated_gold_export = {
+		country_modifier = {
+			trade_efficiency = small_trade_efficiency_bonus
+		}
+		estate_preferences = {
+			crown_estate
+		}
+		years = 2
+	}
+}
+
+
 INJECT:foreign_cultural_law = {
 	agrarian_constitution = {
 		potential = {
