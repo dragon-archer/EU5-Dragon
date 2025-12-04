@@ -1,0 +1,58 @@
+﻿yearly_country_pulse = {
+	on_actions = {
+		da_lucky_yearly_country_pulse
+	}
+}
+
+da_lucky_yearly_country_pulse = {
+	effect = {
+		if = {
+			limit = {
+				is_ai = yes
+				OR = {
+					c:FRA ?= root
+
+					c:TUR ?= root
+
+					c:RUS ?= root
+					c:MOS ?= root
+
+					c:GBR ?= root
+					c:ENG ?= root
+
+					c:HAB ?= root
+
+					c:SPA ?= root
+					c:CAS ?= root
+
+					c:CHI ?= root
+					c:MNG ?= root
+					c:MCH ?= root
+					c:SSH ?= root # Jianzhou
+
+					c:PRU ?= root
+					c:BRA ?= root
+
+					c:TIM ?= root
+
+					c:POR ?= root
+
+					c:POL ?= root
+
+					c:SWE ?= root
+				}
+			}
+			add_country_modifier = {
+				modifier = lucky
+				mode = replace
+				years = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_modifier = lucky
+			}
+			remove_country_modifier = lucky
+		}
+	}
+}
