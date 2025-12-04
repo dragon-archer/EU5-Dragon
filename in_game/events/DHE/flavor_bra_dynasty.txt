@@ -1686,15 +1686,15 @@ flavor_bra_dynasty.1105 = {
 			dynasty = dynasty:hohenzollern_dynasty
 			estate = estate_type:crown_estate
 			culture = culture:brandenburgish
-			adm = { 90 100 } # { 60 80 }
-			dip = { 90 100 } # { 60 80 }
-			mil = { 90 100 } # { 60 80 }
+			adm = 100 # { 60 80 }
+			dip = 100 # { 60 80 }
+			mil = 100 # { 60 80 }
 			age = 20 # 30
 			script = bra_friedrich_hohenzollern
 			father = scope:hohenzollern_father
 			save_scope_as = hohenzollern_character
 			# new
-			remove_traits_of_category = ruler
+			trait_category = none
 			add_trait = trait:free_thinker
 			add_trait = trait:well_advised
 			add_trait = trait:fierce_negotiator
@@ -1716,17 +1716,17 @@ flavor_bra_dynasty.1105 = {
 		create_character = { # Cabinet 1
 			estate = estate_type:crown_estate
 			culture = culture:brandenburgish
-			adm = { 70 100 }
-			dip = { 70 100 }
-			mil = { 70 100 }
+			adm = { 80 100 }
+			dip = { 80 100 }
+			mil = { 80 100 }
 			age = 25
 		}
 		create_character = { # Cabinet 2
 			estate = estate_type:crown_estate
 			culture = culture:brandenburgish
-			adm = { 50 100 }
-			dip = { 60 100 }
-			mil = { 70 100 }
+			adm = { 60 100 }
+			dip = { 70 100 }
+			mil = { 80 100 }
 			age = 28
 		}
 		capital = { save_scope_as = old_capital }
