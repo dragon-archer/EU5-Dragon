@@ -31,3 +31,29 @@ INJECT:foreign_cultural_law = {
 		years = 2
 	}
 }
+
+INJECT:royal_court_customs_law = {
+	military_court_policy = { #prussian court
+		unique = yes
+		potential = {
+			OR = {
+				has_or_had_tag = PRU
+				has_or_had_tag = BRA
+			}
+			has_unlocked_policy_trigger = { type = military_court_policy }
+		}
+
+		country_modifier = {
+			court_spending_cost  = -0.02
+			monthly_towards_land = societal_value_monthly_move
+			monthly_towards_belligerent = societal_value_monthly_move
+			monthly_towards_offensive = societal_value_monthly_move
+			monthly_army_tradition = 0.2
+			global_levy_size_modifier = 0.1
+		}
+		estate_preferences = {
+			nobles_estate
+		}
+		years = 2
+	}
+}

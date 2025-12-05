@@ -215,8 +215,8 @@ flavor_brapru.5 = { #The Soldier-King of Prussia
 	dynamic_historical_event = {
 		tag = BRA
 		tag = PRU
-		from = 1700.1.1
-		to = 1740.1.1
+		from = 1350.1.1
+		to = 1800.1.1
 		monthly_chance = 4
 	}
 
@@ -232,8 +232,14 @@ flavor_brapru.5 = { #The Soldier-King of Prussia
 
 	trigger = {
 		government_type = government_type:monarchy
-		has_advance = soldier_king
 		ruler ?= { mil >= 60 }
+		OR = {
+			has_advance = soldier_king
+			AND = {
+				ruler ?= { mil >= 90 }
+				societal_value:belligerent_vs_conciliatory < -25
+			}
+		}
 	}
 
 	option = {
