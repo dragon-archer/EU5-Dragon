@@ -16,5 +16,5 @@
 		always = yes
 	}
 
-	war_goal_type = conquer_province
+	war_goal_type = fabricated_conquer_province
 }
