@@ -72,7 +72,7 @@
 				type = pop_type:peasants
 				amount = {
 					value = scope:recipient.capital.province.population
-					divide = 4800 # 0.5% total population over 2 years
+					divide = 4800 # 1% total population over 4 years
 					multiply = {
 						value = scope:target.province_capital.migration_attraction
 						divide = {
@@ -80,10 +80,10 @@
 							min = 0.001 #
 						}
 						min = 0.2
-						max = 3.0
+						max = 5.0
 					}
 				}
-				months = 24
+				months = 48
 			}
 		}
 	}

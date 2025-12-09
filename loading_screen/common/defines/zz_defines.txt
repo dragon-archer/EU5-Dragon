@@ -2,6 +2,10 @@
 	MERCHANT_MAINTENANCE_COST = 0.3 # 0.5
 }
 
+NDiplomacy = {
+	PEACE_SEPERATE_BLOCK_MONTHS = 6 # 12
+}
+
 NMarket = {
 	MARKET_UPSTREAM_FACTOR = 0.75 # 0.9
 }

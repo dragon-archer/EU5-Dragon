@@ -1,5 +1,4 @@
-﻿
-INJECT:country_base_values = {
+﻿INJECT:country_base_values = {
 	prestige_decay = -0.005 # default is 0.01, together is 0.005
 
 	land_cost_going_upstream = -10 # default is 30, together is -10
@@ -64,7 +63,7 @@ REPLACE:army_tradition = {
 	}
 
 	land_morale_modifier = 0.2
-	siege_ability = 0.1
+	siege_ability = 0.2 # 0.1
 	monthly_karma = -0.1
 
 	monthly_towards_land = societal_value_large_monthly_move # societal_value_monthly_move
@@ -79,7 +78,7 @@ REPLACE:navy_tradition = {
 	}
 
 	naval_morale_modifier = 0.2
-	global_maritime_presence_modifier = 0.5
+	global_maritime_presence_modifier = 1.0 # 0.5
 
 	monthly_towards_naval = societal_value_large_monthly_move # societal_value_monthly_move
 

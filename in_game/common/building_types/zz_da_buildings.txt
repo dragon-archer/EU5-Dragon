@@ -1,0 +1,4 @@
+﻿INJECT:bailiff = {
+	town = yes
+	city = yes
+}
