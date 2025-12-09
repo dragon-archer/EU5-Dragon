@@ -5,6 +5,13 @@
 	army_tradition_decay = 0.001 # 0.002
 }
 
+REPLACE:positive_province_food_growth = {
+	game_data = {
+		category = province
+	}
+	local_population_growth = 0.001 # 0.0004
+}
+
 REPLACE_OR_CREATE:PRU_secondary_capital_tangermunde = {
 	game_data = {
 		category = location
@@ -44,6 +51,23 @@ REPLACE:fort_maintenance_reverse_mod = {
 	global_garrison_size_modifier = -0.5
 	global_defensive = -1.0 # -2.0
 	monthly_prestige = -0.05
+}
+
+REPLACE:building_levels = {
+	game_data = {
+		category = location
+	}
+	local_population_capacity_modifier = 0.005 # 0.001
+	local_trade_center_power = 0.0005 # 0.0004
+	local_monthly_development = 0.00005 #
+}
+
+INJECT:development = {
+	free_building_levels = 1 # total is 2
+}
+
+INJECT:total_population = {
+	free_building_levels = 0.15 # total is 0.2
 }
 
 prepared_for_black_death = {
