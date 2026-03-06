@@ -1,5 +1,4 @@
-﻿# mod file
-spontaneous_conversion_modifier = {
+﻿spontaneous_conversion_modifier = {
 	game_data = {
 		category = location
 	}
@@ -12,3 +11,10 @@ spontaneous_assimilation_modifier = {
 	}
 	local_pop_assimilation_speed = 1.000 # 1k pop
 }
+
+da_research_speed_from_university = {
+	game_data = {
+		category = country
+	}
+	research_speed = 0.01
+} # 1% per university

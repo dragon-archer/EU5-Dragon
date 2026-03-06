@@ -9,7 +9,7 @@ REPLACE:positive_province_food_growth = {
 	game_data = {
 		category = province
 	}
-	local_population_growth = 0.001 # 0.0004
+	local_population_growth = 0.001 # 0.0008
 }
 
 REPLACE_OR_CREATE:PRU_secondary_capital_tangermunde = {
@@ -17,8 +17,8 @@ REPLACE_OR_CREATE:PRU_secondary_capital_tangermunde = {
 		category = location
 	}
 
-	local_proximity_source = 80 # 20
-	local_distance_from_capital_cost_modifier = -0.5
+	local_proximity_source = 80 # 50
+	local_distance_from_capital_speed_propagation = 0.5 #
 }
 
 REPLACE:army_maintenance_mod = {
@@ -84,6 +84,7 @@ lucky = {
 	}
 	character_child_education = 0.25
 	global_integration_speed_modifier = 0.25
+	government_size = 1
 
 	discipline = 0.05
 	country_cabinet_efficiency = 0.1

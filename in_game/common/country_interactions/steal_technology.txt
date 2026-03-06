@@ -1,0 +1,56 @@
+﻿steal_technology =  {
+	type = diplomacy
+	category = CATEGORY_COVERT_ACTIONS
+
+	diplomatic_cost = steal_technology_cost
+
+	allow = {
+	}
+
+	block_when_at_war = no
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = recipient
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+			num_of_advances_researched > scope:actor.num_of_advances_researched
+		}
+		enabled = {
+			research_progress > 5 # 20
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			add_research_progress = {
+				value = 2
+				add = {
+					value = scope:recipient.research_progress
+					multiply = 0.05
+				}
+				multiply = {
+					value = 1
+					add = modifier:spy_network_construction
+				}
+				multiply = {
+					value = 1
+					add = modifier:research_speed_modifier
+				}
+				multiply = modifier:research_speed
+			}
+		}
+		scope:recipient = {
+			add_research_progress = {
+				value = -2
+				subtract = {
+					value = research_progress
+					multiply = 0.05
+				}
+			}
+		}
+	}
+}

@@ -23,6 +23,7 @@ northern_march = {
 		}
 	}
 	global_population_growth = 0.001
+	global_population_capacity_modifier = 0.25
 	rural_migration_attraction = 0.25
 	non_rural_migration_attraction = 0.25
 	levy_combat_efficiency_modifier = 0.25

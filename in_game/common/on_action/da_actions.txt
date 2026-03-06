@@ -1,6 +1,7 @@
 ﻿yearly_country_pulse = {
 	on_actions = {
 		da_lucky_yearly_country_pulse
+		da_university_yearly_country_pulse
 	}
 }
 
@@ -54,5 +55,28 @@ da_lucky_yearly_country_pulse = {
 			}
 			remove_country_modifier = lucky
 		}
+	}
+}
+
+da_university_yearly_country_pulse = {
+	trigger = {
+		country_university_level > 0
+	}
+	effect = {
+		set_variable = {
+			name = da_university_var
+			value = {
+				value = country_university_level
+				multiply = 10
+			}
+		}
+		da_sqrt = { var = da_university_var }
+		add_country_modifier = {
+			modifier = da_research_speed_from_university
+			mode = replace
+			years = 1
+			size = var:da_university_var
+		}
+		remove_variable = da_university_var
 	}
 }

@@ -2274,6 +2274,7 @@ dynasty_manager = {
 	avesnes_dynasty = { #https://fr.wikipedia.org/wiki/Maison_d%27Avesnes
 		name = { name = avesnes_dynasty }
 		home = valenciennes # Avesnes-sur-Helpe, in the north of France.
+		dynasty_name_type = location
 		male_names = {
 			name_florence name_john name_wido name_william
 		}
@@ -4939,6 +4940,7 @@ dynasty_manager = {
 	baux_dynasty = {
 		name = { name = baux_dynasty }
 		home = arles
+		dynasty_name_type = location
 		male_names = {
 			name_bertrand name_francis name_james name_raymond name_william
 		}
@@ -5723,16 +5725,19 @@ dynasty_manager = {
 	tour_du_pin_dynasty = {
 		name = { name = tour_du_pin_dynasty }
 		home = vienne # La-Tour-du-Pin
+		dynasty_name_type = location
 	}
 
 	orange_dynasty = {
 		name = { name = orange_dynasty }
 		home = orange
+		dynasty_name_type = location
 	}
 
 	geneve_dynasty = { #https://fr.wikipedia.org/wiki/Maison_de_Gen%C3%A8ve
 		name = { name = geneve_dynasty }
 		home = annecy
+		dynasty_name_type = location
 	}
 
 	#West Africa
@@ -6784,8 +6789,8 @@ dynasty_manager = {
 		home = hetu_ala
 	}
 
-	jusheli_dynasty = {
-		name = { name = jusheli_dynasty }
+	jusheri_dynasty = {
+		name = { name = jusheri_dynasty }
 		home = juxeri
 	}
 
@@ -7229,6 +7234,11 @@ dynasty_manager = {
 
 	champa_dynasty = {
 		name = { name = champa_dynasty }
+		home = vijaya
+	}
+
+	vijaya_dynasty = {
+		name = { name = vijaya_dynasty }
 		home = vijaya
 	}
 
@@ -8448,4 +8458,90 @@ dynasty_manager = {
 		name = { name = von_Geroldseck_dynasty }
 		home = offenburg
 	}
+
+	rtr_tianwan_xu_dynasty = { #CTW
+		name = { name = name_xu }
+		home = hanchuan
+	}
+	
+	rtr_chen_dynasty = { #CHE
+		name = { name = name_chen }
+		home = dehua_jiujiang
+	}
+
+	rtr_wu_zhang_dynasty = { #WUU
+		name = { name = name_zhang1 }
+		home = gaoyou
+	}
+
+	rtr_fang_dynasty = { #CFN
+		name = { name = name_fang1 }
+		home = yongjia
+	}
+
+	rtr_mao_dynasty = { #CMO
+		name = { name = name_mao }
+		home = zichuan
+	}
+
+	rtr_xia_ming_dynasty = { #CXI
+		name = { name = name_ming }
+		home = baxian
+	}
+
+	rtr_guo_dynasty = { #CGU
+		name = { name = name_guo }
+		home = zhongli
+	}
+
+	rtr_ming_zhu_dynasty = { #MNG
+		name = { name = name_zhu }
+		home = shangyuan
+	}
+
+	rtr_nanping_chen_dynasty = { #CNP
+		name = { name = name_chen }
+		home = nanping
+	}
+
+	rtr_dongguan_he_dynasty = { #CDN
+		name = { name = name_he22 }
+		home = dongguan
+	}
+
+	rtr_li_dynasty = { #CSI
+		name = { name = name_li31 }
+		home = jingzhao
+	}
+
+	rtr_bayad_dynasty = { #CKO
+		name = { name = bayad_dynasty }
+		home = kaifeng
+	}
+
+	rtr_han_dynasty = { #Han Shantong
+		name = { name = name_han2 }
+		home = qiaoxian
+	}
+	
+	baatud_dynasty = {
+		name = { name = baatud_dynasty }
+		home = barkul
+	}
+	
+	choros_dynasty = {
+		name = { name = choros_dynasty }
+		home = khar_balgas
+	}
+	
+	khoid_dynasty = {
+		name = { name = khoid_dynasty }
+		home = zavkhan
+	}
+	
+	torghut_dynasty = {
+		name = { name = torghut_dynasty }
+		home = bulgan
+	}
+	
 }

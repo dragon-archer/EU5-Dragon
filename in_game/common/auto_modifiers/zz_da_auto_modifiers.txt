@@ -1,43 +1,14 @@
 ﻿INJECT:country_base_values = {
 	prestige_decay = -0.005 # default is 0.01, together is 0.005
-
-	land_cost_going_upstream = -10 # default is 30, together is -10
 }
 
-REPLACE:ruler_has_general_trait = {
-	potential_trigger = {
-		ruler ?= {
-			has_trait_category = general
-		}
-	}
-
-	monthly_towards_belligerent = societal_value_monthly_move
-	monthly_towards_offensive = societal_value_monthly_move
-	monthly_towards_land = societal_value_monthly_move
-}
-
-REPLACE:ruler_has_admiral_trait = {
-	potential_trigger = {
-		ruler ?= {
-			has_trait_category = admiral
-		}
-	}
-
-	monthly_towards_belligerent = societal_value_monthly_move
-	monthly_towards_offensive = societal_value_monthly_move
-	monthly_towards_naval = societal_value_monthly_move
-}
-
-REPLACE:stability_impact = {
+REPLACE:num_locations_impact = {
 	scales_with = {
-		value = stability
-		multiply = 0.01
+		value = num_locations
+		divide = 15 # 10
 	}
 
-	pop_join_rebel_threshold = -0.1
-	pop_leave_rebels_threshold = -0.05
-
-	great_power_score = 25.0 # 5.0
+	fort_limit = 1
 }
 
 REPLACE:prestige = {
@@ -50,8 +21,6 @@ REPLACE:prestige = {
 	cultural_influence = 1
 	diplomatic_reputation = diplomatic_reputation_severe_bonus
 	skill_of_new_artists = 0.5 # 0.1
-
-	great_power_score_exempt_from_forfeit = 50 # 25
 
 	antagonism_monthly_change_modifier = 0.25
 }
@@ -67,8 +36,6 @@ REPLACE:army_tradition = {
 	monthly_karma = -0.1
 
 	monthly_towards_land = societal_value_large_monthly_move # societal_value_monthly_move
-
-	great_power_score_exempt_from_forfeit = 20 # 10
 }
 
 REPLACE:navy_tradition = {
@@ -81,116 +48,75 @@ REPLACE:navy_tradition = {
 	global_maritime_presence_modifier = 1.0 # 0.5
 
 	monthly_towards_naval = societal_value_large_monthly_move # societal_value_monthly_move
-
-	great_power_score_exempt_from_forfeit = 20 # 10
 }
 
-REPLACE:high_legitimacy = {
-	potential_trigger = {
-		uses_government_power = legitimacy
-	}
-	limit = {
-		legitimacy > 50
-	}
+REPLACE:state_religion_clergy_ratio = {
+	potential_trigger = { total_population > 0 } # No division by 0
 	scales_with = {
-		value = legitimacy
-		multiply = 0.01
+		value = state_religion_clergy
+		multiply = 100
+		max = { # 1
+			value = state_religion_clergy
+			multiply = 50
+			add = 0.5
+			max = 1.5
+		}
 	}
 
-	global_crown_estate_power = 0.10
-	pop_leave_rebels_threshold = -0.05
-
-	great_power_score_exempt_from_forfeit = 20 # 10
-	monthly_righteousness = 0.5
-	monthly_doom = -0.1
-	monthly_towards_absolutism = societal_value_minor_monthly_move
+	stability_investment = clergy_stability_investment
+	monthly_religious_influence = 0.05
+	monthly_towards_spiritualist = societal_value_monthly_move
 }
 
-REPLACE:high_republican_tradition = {
-	potential_trigger = {
-		uses_government_power = republican_tradition
-	}
+
+REPLACE:proper_culture_nobles_ratio = {
+	potential_trigger = { total_population > 0 } # No division by 0
 	scales_with = {
-		value = republican_tradition
-		multiply = 0.01
+		value = proper_culture_nobles
+		multiply = 150 # 100
+
+		max = 1
 	}
 
-	legislative_efficiency = 0.10
-	pop_leave_rebels_threshold = -0.05
-	monthly_towards_liberalism = societal_value_monthly_move
-
-	great_power_score = 20 # 10
+	discipline = 0.1
+	monthly_legitimacy = 0.5
+	diplomatic_reputation = 2
+	monthly_towards_aristocracy = societal_value_monthly_move
 }
 
-REPLACE:high_devotion = {
-	potential_trigger = {
-		uses_government_power = devotion
-	}
+REPLACE:burghers_percentage_in_country = {
+	potential_trigger = { total_population > 0 } # No division by 0
 	scales_with = {
-		value = devotion
-		multiply = 0.01
+		value = percentage_pop_type_in_country:burghers
+		multiply = 5 # 1
+		max = 1
 	}
 
-	monthly_religious_influence = 0.1
-	pop_leave_rebels_threshold = -0.05
-
-	great_power_score = 20 # 10
+	monthly_towards_capital_economy = societal_value_huge_monthly_move
 }
 
-REPLACE:high_horde_unity = {
+REPLACE:ruler_has_general_trait = {
 	potential_trigger = {
-		uses_government_power = horde_unity
-	}
-	scales_with = {
-		value = horde_unity
-		multiply = 0.01
+		ruler ?= {
+			has_trait_category = general
+			NOT = { has_trait = unsuited_for_army_command }
+		}
 	}
 
-	discipline = 0.10
-	pop_leave_rebels_threshold = -0.05
-
-	great_power_score = 20 # 10
+	monthly_towards_belligerent = societal_value_monthly_move
+	monthly_towards_offensive = societal_value_monthly_move
+	monthly_towards_land = societal_value_monthly_move
 }
 
-REPLACE:high_tribal_cohesion = {
+REPLACE:ruler_has_admiral_trait = {
 	potential_trigger = {
-		uses_government_power = tribal_cohesion
+		ruler ?= {
+			has_trait_category = admiral
+			NOT = { has_trait = unsuited_for_naval_command }
+		}
 	}
-	scales_with = {
-		value = tribal_cohesion
-		multiply = 0.01
-	}
 
-	global_levy_size_modifier = 0.25
-	pop_leave_rebels_threshold = -0.05
-
-	great_power_score = 20 # 10
-}
-
-# REPLACE:country_control_scaled_population = {
-# 	scales_with = {
-# 		value = total_control_scaled_population
-# 		max = {
-# 			value = 1000
-# 			add = {
-# 				value = 200
-# 				multiply = num_embraced_institutions
-# 			}
-# 		}
-# 	}
-
-# 	great_power_score = 0.1 # 0.05
-# }
-
-REPLACE:total_merchant_capacity_impact = {
-	scales_with =  total_merchant_capacity
-
-
-	great_power_score = 0.2 # 0.05
-}
-
-REPLACE:monthly_income_impact = {
-	scales_with = monthly_income_trade_and_tax
-
-	great_power_score = 0.2 # 0.05
+	monthly_towards_belligerent = societal_value_monthly_move
+	monthly_towards_offensive = societal_value_monthly_move
+	monthly_towards_naval = societal_value_monthly_move
 }

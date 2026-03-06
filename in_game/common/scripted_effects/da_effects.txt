@@ -1,0 +1,81 @@
+﻿# Input: var, variable name
+da_sqrt = {
+	if = {
+		limit = {
+			var:$var$ > 0
+		}
+		set_local_variable = {
+			name = _da_sqrt_scale
+			value = 1
+		}
+		set_local_variable = {
+			name = _da_sqrt_in
+			value = var:$var$
+		}
+		set_local_variable = {
+			name = _da_sqrt_out
+			value = 2
+		}
+		set_local_variable = {
+			name = _da_sqrt_cnt
+			value = 0
+		}
+		while = {
+			limit = {
+				local_var:_da_sqrt_in >= 4
+			}
+			change_local_variable = {
+				name = _da_sqrt_scale
+				multiply = 2
+			}
+			change_local_variable = {
+				name = _da_sqrt_in
+				multiply = 0.25
+			}
+		}
+		while = {
+			limit = {
+				local_var:_da_sqrt_in < 1
+			}
+			change_local_variable = {
+				name = _da_sqrt_scale
+				multiply = 0.5
+			}
+			change_local_variable = {
+				name = _da_sqrt_in
+				multiply = 4
+			}
+		}
+		while = {
+			limit = {
+				local_var:_da_sqrt_cnt < 10
+			}
+			change_local_variable = {
+				name = _da_sqrt_cnt
+				add = 1
+			}
+			set_local_variable = {
+				name = _da_sqrt_out
+				value = {
+					value = local_var:_da_sqrt_out
+					add = {
+						value = local_var:_da_sqrt_in
+						divide = local_var:_da_sqrt_out
+					}
+					multiply = 0.5
+				}
+			}
+		}
+		set_variable = {
+			name = $var$
+			value = {
+				value = local_var:_da_sqrt_out
+				multiply = local_var:_da_sqrt_scale
+			}
+		}
+		remove_local_variable = _da_sqrt_scale
+		remove_local_variable = _da_sqrt_in
+		remove_local_variable = _da_sqrt_out
+		remove_local_variable = _da_sqrt_cnt
+	}
+}

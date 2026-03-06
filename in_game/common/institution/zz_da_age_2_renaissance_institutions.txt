@@ -1,6 +1,7 @@
 ﻿REPLACE:renaissance = {
 	age = age_2_renaissance
 
+	location = florence	#fallback for when no valid
 
 	can_spawn = {
 		OR = {

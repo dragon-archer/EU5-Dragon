@@ -2,3 +2,10 @@
 num_of_advances_researched_sv = {
 	value = num_of_advances_researched
 }
+
+country_university_level = {
+	every_owned_location = {
+		limit = { has_building_with_at_least_one_level = university }
+		add = 1
+	}
+}

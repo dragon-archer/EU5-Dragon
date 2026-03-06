@@ -1,4 +1,72 @@
-﻿INJECT:bailiff = {
+﻿INJECT:university = {
+	modifier = {
+		research_speed = 0.01 # Actually for tooltip only
+	}
+}
+
+REPLACE:settlement_building = {
+	is_foreign = no
+	max_levels = 1
+	pop_type = peasants
+
+
+	category = infrastructure_category
+
+	employment_size = tiny_rural_peasant_produce_employment
+
+
+	rural_settlement = yes
 	town = yes
 	city = yes
+
+
+	location_potential = {
+		trigger_if = {
+			limit = { location_rank = location_rank:city }
+			location_population_percentage < 0.06
+		}
+		trigger_else_if = {
+			limit = { location_rank = location_rank:town }
+			location_population_percentage < 0.08
+		}
+		trigger_else = {
+			location_population_percentage < 0.10
+		}
+	}
+	remove_if = {
+		location = {
+			trigger_if = {
+				limit = { location_rank = location_rank:city }
+				location_population_percentage > 0.08
+			}
+			trigger_else_if = {
+				limit = { location_rank = location_rank:town }
+				location_population_percentage > 0.10
+			}
+			trigger_else = {
+				location_population_percentage > 0.12
+			}
+		}
+	}
+
+
+	possible_production_methods = {
+		colony_maintenance
+	}
+	construction_demand = colony_construction
+
+
+	build_time = village_build_time
+
+	modifier = {
+		local_migration_attraction = 1.0
+		local_population_growth = 0.01
+	}
+
+}
+
+INJECT:irrigation_systems = {
+	modifier = {
+		local_population_capacity = 4.0 # 4.0 + 1.0 = 5.0
+	}
 }

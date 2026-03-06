@@ -3,5 +3,7 @@
  STATIC_MODIFIER_NAME_spontaneous_assimilation_modifier: "自发同化"
  STATIC_MODIFIER_NAME_prepared_for_black_death: "预防黑死病"
  STATIC_MODIFIER_NAME_lucky: "幸运国家"
+ STATIC_MODIFIER_NAME_da_research_speed_from_university: "来自$university$"
+ STATIC_MODIFIER_DESC_da_research_speed_from_university: "额外[research_progress|E]=sqrt($university$数量*0.1)"
  da_cb_border_conflict: "边境冲突"
  da_cb_border_conflict_desc: "这块地离我们那么近，让我们代你管理吧！"

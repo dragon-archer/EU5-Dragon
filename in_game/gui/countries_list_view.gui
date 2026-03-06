@@ -51,6 +51,8 @@ lateralview_full = {
 							size = { 120 -1 }
 							layoutpolicy_vertical = expanding
 						}
+						
+		
 
 						sort_by_key_button = {
 							name = "religion"
@@ -71,6 +73,7 @@ lateralview_full = {
 							layoutpolicy_vertical = expanding
 							size = { 120 -1 }
 						}
+
 						text_single = { #DA #TODO
 							text = "stability"
 							layoutpolicy_vertical = expanding
@@ -92,6 +95,7 @@ lateralview_full = {
 							align = center|nobaseline
 							size = { 120 -1 }
 						}
+
 						sort_by_key_button = {
 							name = "gp"
 							layoutpolicy_vertical = expanding
