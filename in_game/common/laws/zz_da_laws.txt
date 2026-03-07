@@ -22,7 +22,7 @@ INJECT:foreign_cultural_law = {
 		}
 		country_modifier = {
 			global_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_distance_from_capital_cost_modifier = -0.05
+			global_distance_from_capital_speed_propagation = 0.1
 			global_pop_assimilation_speed_modifier = 0.1
 		}
 		estate_preferences = {

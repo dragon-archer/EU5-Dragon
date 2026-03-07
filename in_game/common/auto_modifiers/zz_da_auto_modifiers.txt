@@ -55,12 +55,7 @@ REPLACE:state_religion_clergy_ratio = {
 	scales_with = {
 		value = state_religion_clergy
 		multiply = 100
-		max = { # 1
-			value = state_religion_clergy
-			multiply = 50
-			add = 0.5
-			max = 1.5
-		}
+		max = 1.5 # 1
 	}
 
 	stability_investment = clergy_stability_investment
