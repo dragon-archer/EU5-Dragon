@@ -7,3 +7,10 @@
  STATIC_MODIFIER_DESC_da_research_speed_from_university: "额外[research_progress|E]=sqrt($university$数量*0.1)"
  da_cb_border_conflict: "边境冲突"
  da_cb_border_conflict_desc: "这块地离我们那么近，让我们代你管理吧！"
+
+ # Brandenburg flavor:
+ ## replace
+ robber_barons_when_tt: "1340年后强盗贵族相关事件可能开始触发"
+ ## new
+ turmoil_in_brandenburg.1.b: "让霍亨索伦家族去担心吧！"
+ turmoil_in_brandenburg.1.b.tt: "我们将把勃兰登堡丢给霍亨索伦家族统治"
