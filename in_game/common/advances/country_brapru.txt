@@ -6,10 +6,10 @@
 			has_or_had_tag = PRU
 		}
 	}
-	cultures_capacity = 1
-	cultures_capacity_modifier = 0.2
+	cultures_capacity = 1.5
 	cultural_influence_modifier = 0.25
-	monthly_towards_offensive = societal_value_monthly_move
+	global_integration_speed_modifier = 0.15
+	global_distance_from_capital_speed_propagation = 0.1
 
 	requires = distribution_of_power_advance
 }
@@ -26,7 +26,7 @@ northern_march = {
 	global_population_capacity_modifier = 0.25
 	rural_migration_attraction = 0.25
 	non_rural_migration_attraction = 0.25
-	levy_combat_efficiency_modifier = 0.25
+	levy_combat_efficiency_modifier = 0.1
 
 	requires = windmills_advance
 }
@@ -41,7 +41,7 @@ divide_estates = {
 	}
 	global_build_buildings_cost = -0.1
 	global_crown_estate_power = 0.1
-	global_integration_speed_modifier = 0.1
+	country_cabinet_efficiency = 0.1
 	global_estate_satisfaction_recovery = 0.001
 
 	requires = medieval_administration # government_size_renaissance
