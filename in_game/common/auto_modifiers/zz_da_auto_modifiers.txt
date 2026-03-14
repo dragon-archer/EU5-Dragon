@@ -1,8 +1,4 @@
-﻿INJECT:country_base_values = {
-	prestige_decay = -0.005 # default is 0.01, together is 0.005
-}
-
-REPLACE:num_locations_impact = {
+﻿REPLACE:num_locations_impact = {
 	scales_with = {
 		value = num_locations
 		divide = 15 # 10

@@ -124,6 +124,7 @@ difficulty_ai_very_hard = {
 	stability_investment = 0.1
 	country_cabinet_efficiency = 0.2
 	global_crown_estate_power = 0.2
+	government_size = 1
 }
 
 
