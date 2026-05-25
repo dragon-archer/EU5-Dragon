@@ -78,6 +78,7 @@
 			}
 			OR = {
 				has_estate = estate_type:nobles_estate
+				has_estate = estate_type:crown_estate
 				AND = {
 					scope:actor = { succession_law = heir_selection:signoria_selection }
 					has_estate = estate_type:burghers_estate

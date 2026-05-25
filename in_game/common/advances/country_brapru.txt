@@ -71,6 +71,7 @@ iron_tooth = {
 		}
 	}
 	global_estate_target_satisfaction = small_permanent_target_satisfaction
+	global_distance_from_capital_speed_propagation = 0.1
 
 	requires = government_size_renaissance # correct_box_advance_discovery
 }

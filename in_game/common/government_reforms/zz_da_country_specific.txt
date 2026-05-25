@@ -1,5 +1,4 @@
-﻿
-REPLACE_OR_CREATE:prussian_monarchy = {
+﻿REPLACE_OR_CREATE:prussian_monarchy = {
 	major = yes
 	unique = yes
 	age = age_4_reformation
@@ -39,4 +38,23 @@ REPLACE_OR_CREATE:pru_unified_legal_system = {
 		monthly_towards_centralization = societal_value_monthly_move
 	}
 	years = 2
+}
+
+REPLACE:prikazi_reform = {
+	potential = {
+		OR = {
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
+		}
+		has_variable = prikazi
+	}
+	country_modifier = {
+		government_reform_slots = 1
+		country_cabinet_efficiency = 0.15
+		monthly_towards_centralization = societal_value_minor_monthly_move
+		unlock_prikazi_reform_cabinet_actions = yes
+		# new
+		government_size = 1
+	}
+	years = 1
 }

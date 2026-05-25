@@ -3,3 +3,9 @@ REPLACE:antagonism_maps_stolen = {
 	value = 1 # 10
 	yearly_decay = 0.2 # 1
 }
+
+REPLACE:opinion_insult = {
+	value = -100 # -50
+	yearly_decay = 5 # 1
+	min = -100 # -50
+}

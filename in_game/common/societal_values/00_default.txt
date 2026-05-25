@@ -5,6 +5,7 @@
 
 		subject_loyalty = -10 # -20
 		annexation_speed_modifier = 0.33
+		num_local_governors = 1.5
 
 		control_importance_modifier = 0.2
 
@@ -277,6 +278,7 @@ land_vs_naval = {
 
 		trade_sea_movement_cost_modifier = 0.25 # 0.5
 		trade_land_movement_cost_modifier = -0.2 # -0.1
+		num_local_governors = 1.5
 
 		bias_for_militarist_policies = 25
 		bias_for_administrative_policies = 25
@@ -288,6 +290,7 @@ land_vs_naval = {
 
 		trade_sea_movement_cost_modifier = -0.2 # -0.10
 		trade_land_movement_cost_modifier = 0.25 # 0.5
+		num_naval_governors = 1.5
 
 		bias_for_colonialist_policies = 100
 	}

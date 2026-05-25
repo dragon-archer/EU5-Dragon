@@ -55,7 +55,7 @@ REPLACE:state_religion_clergy_ratio = {
 	}
 
 	stability_investment = clergy_stability_investment
-	monthly_religious_influence = 0.05
+	monthly_religious_influence = 0.5 # 0.05
 	monthly_towards_spiritualist = societal_value_monthly_move
 }
 

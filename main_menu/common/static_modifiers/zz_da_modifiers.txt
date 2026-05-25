@@ -70,6 +70,18 @@ INJECT:total_population = {
 	free_building_levels = 0.15 # total is 0.2
 }
 
+INJECT:integration_conquered = {
+	local_prosperity_decay = 0.001
+}
+
+INJECT:integration_integrated = {
+	local_prosperity_decay = -0.0005
+}
+
+INJECT:integration_core = {
+	local_prosperity_decay = -0.002
+}
+
 prepared_for_black_death = {
 	game_data = {
 		category = country

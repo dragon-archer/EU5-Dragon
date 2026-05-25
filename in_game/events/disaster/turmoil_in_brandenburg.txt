@@ -85,7 +85,6 @@ turmoil_in_brandenburg.1 = {
 	# Brandenburg will prevail!
 	option = {
 		name = turmoil_in_brandenburg.1.a
-		historical_option = yes
 		add_legitimacy = -40
 		custom_tooltip = {
 			text = turmoil_in_brandenburg.1.a.at
@@ -98,6 +97,7 @@ turmoil_in_brandenburg.1 = {
 	# Let's let Hohenzollern take care of it
 	option = {
 		name = turmoil_in_brandenburg.1.b
+		historical_option = yes
 		add_legitimacy = -40
 		custom_tooltip = {
 			text = turmoil_in_brandenburg.1.a.at

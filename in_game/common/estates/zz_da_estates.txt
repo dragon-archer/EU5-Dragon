@@ -5,3 +5,11 @@
 		global_production_efficiency = medium_production_efficiency_bonus # with already existing bonuses, 0.05 at 100%
 	}
 }
+
+INJECT:tribes_estate = {
+	#multiplied with (satisfaction - LOW_SATISFACTION_THRESHOLD)
+	satisfaction = {
+		global_raw_material_output = 0.05
+		global_monthly_food_modifier = 0.10
+	}
+}
