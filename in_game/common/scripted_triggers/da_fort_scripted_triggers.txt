@@ -1,0 +1,34 @@
+﻿da_location_has_fort = {
+	OR = {
+		has_building = building_type:stockade
+		has_building = building_type:castle
+		has_building = building_type:bastion
+		has_building = building_type:star_fort
+		has_building = building_type:fortress
+		has_building = building_type:city_walls
+		has_building = building_type:ruined_great_wall_of_china
+		has_building = building_type:repaired_great_wall_of_china
+		has_building = building_type:theodosian_walls
+	}
+}
+
+da_location_can_build_fort_trigger = {
+	custom_tooltip = {
+		text = da_tt_fort_town_above_or_capital
+		OR = {
+			location_rank = location_rank:town
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+			is_capital = yes
+		}
+	}
+	custom_tooltip = {
+		text = da_tt_fort_only_one_in_province
+		province ?= {
+			any_location_in_province = {
+				da_location_has_fort = yes
+				count = 0
+			}
+		}
+	}
+}
