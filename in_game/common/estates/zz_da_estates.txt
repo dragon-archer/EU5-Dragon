@@ -13,3 +13,9 @@ INJECT:tribes_estate = {
 		global_monthly_food_modifier = 0.10
 	}
 }
+
+INJECT:crown_estate = {
+	power = {
+		estate_building_destruction_satisfaction_impact = -0.5
+	}
+}
