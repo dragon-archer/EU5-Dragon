@@ -58,5 +58,6 @@ expensive_in_depth_education =
 	}
 	country_modifier = {
 		court_spending_cost_modifier = 0.05
+		select_expensive_child_education_cost_modifier = 0.5
 	}
 }

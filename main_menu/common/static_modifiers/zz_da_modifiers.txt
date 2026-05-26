@@ -82,6 +82,10 @@ INJECT:integration_core = {
 	local_prosperity_decay = -0.002
 }
 
+INJECT:average_literacy = {
+	research_speed = 0.5
+}
+
 prepared_for_black_death = {
 	game_data = {
 		category = country
