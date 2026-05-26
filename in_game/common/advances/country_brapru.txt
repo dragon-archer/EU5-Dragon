@@ -162,7 +162,8 @@ goose_step = {
 			has_or_had_tag = PRU
 		}
 	}
-	army_infantry_power = 0.2
+	army_heavy_infantry_power = 0.2
+	army_light_infantry_power = 0.1
 
 	requires = absolute_rulership # military_tactics_advance_6
 }

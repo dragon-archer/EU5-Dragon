@@ -86,23 +86,23 @@ spiritualist_vs_humanist = {
 aristocracy_vs_plutocracy = { #
 
 	left_modifier = {
-		discipline = 0.05
+		discipline = 0.1
 		global_nobles_estate_power = 0.50
 		global_nobles_city_desired_pop_scaled = 0.01
 		nobles_estate_target_satisfaction = medium_permanent_target_satisfaction #
-
-		court_spending_cost  = 0.02
+		global_nobles_pop_growth = 0.25
+		court_spending_cost_modifier = 0.25
 		court_language_is_market_language_importance_modifier = -0.5
 		bias_for_patron_of_arts_policies = 50
 		bias_for_militarist_policies = 25
 	}
 	right_modifier = {
-		trade_efficiency = small_trade_efficiency_bonus
+		selling_efficiency = small_trade_efficiency_bonus
 		global_burghers_estate_power = 0.50
-		global_burghers_city_desired_pop_scaled = 0.05 #
+		global_burghers_city_desired_pop_scaled = 0.01
 		burghers_estate_target_satisfaction = medium_permanent_target_satisfaction #
-
-		court_spending_cost  = -0.02
+		market_building_levels = 0.5
+		court_spending_cost_modifier  = -0.25
 		court_language_is_market_language_importance_modifier = 0.5
 		bias_for_patron_of_arts_policies = 50
 		bias_for_capitalist_policies = 25
@@ -117,6 +117,7 @@ serfdom_vs_free_subjects = {
 
 		nobles_estate_target_satisfaction = large_permanent_target_satisfaction
 
+		fort_maintenance_cost = -0.2
 
 		peasants_estate_levy_size = 0.5 # 0.25
 		global_peasant_enfranchisment = -0.33
@@ -133,6 +134,8 @@ serfdom_vs_free_subjects = {
 
 		peasants_estate_target_satisfaction = large_permanent_target_satisfaction
 
+		global_devastation_recovery = 0.01
+
 		peasants_estate_levy_size = -0.25
 		global_peasant_enfranchisment = 0.33
 
@@ -147,13 +150,12 @@ mercantilism_vs_free_trade = {
 
 
 	left_modifier = {
-		merchant_maintenance_cost = -0.1
+		merchant_maintenance_efficiency = 0.2
 		foreign_export_from_market_cost_modifier = 0.1
+		export_impact_on_demand = 0.1
 
 		global_trade_protection_factor = 0.5
-		trade_efficiency = small_trade_efficiency_penalty
-
-		produced_in_market_bonus = 0.1
+		import_efficiency = small_trade_efficiency_penalty
 
 		trade_importance_modifier = -0.2
 		court_language_is_market_language_importance_modifier = -0.5
@@ -164,12 +166,7 @@ mercantilism_vs_free_trade = {
 		global_merchant_power = 0.2
 
 		global_trade_protection_factor = -0.25
-		trade_efficiency = small_trade_efficiency_bonus
-
-
-		produced_in_market_bonus = -0.1
-
-
+		selling_efficiency = small_trade_efficiency_bonus
 
 		trade_importance_modifier = 0.2
 		court_language_is_market_language_importance_modifier = 0.5
@@ -180,7 +177,7 @@ mercantilism_vs_free_trade = {
 ##############################################
 belligerent_vs_conciliatory = {
 	left_modifier = {
-		global_war_score_cost = -0.1
+		global_war_score_efficiency = 0.25
 		spy_network_construction = 0.33 # 0.1
 		army_tradition_decay = -0.0025 #
 
@@ -225,7 +222,7 @@ quality_vs_quantity = {
 		discipline = 0.05 #
 
 		army_initiative = 0.25
-		army_maintenance_cost = 0.1
+		army_maintenance_efficiency = -0.1
 		bias_for_militarist_policies = 50
 	}
 	right_modifier = {
@@ -234,7 +231,7 @@ quality_vs_quantity = {
 		global_army_levy_size_modifier = 0.2 #
 
 		army_initiative = -0.25
-		army_maintenance_cost = -0.1
+		army_maintenance_efficiency = 0.2
 		bias_for_militarist_policies = 50
 	}
 
@@ -276,9 +273,9 @@ land_vs_naval = {
 		land_cost_on_distance_from_capital_speed_propagation = 0.2
 		global_max_rgo_size_modifier = 0.1 # 0.05
 
-		trade_sea_movement_cost_modifier = 0.25 # 0.5
-		trade_land_movement_cost_modifier = -0.2 # -0.1
-		num_local_governors = 1.5
+		trade_sea_efficiency = -0.2 # -0.5
+		trade_land_efficiency = 0.25 # 0.2
+		num_local_governors = 1.5 #
 
 		bias_for_militarist_policies = 25
 		bias_for_administrative_policies = 25
@@ -288,9 +285,9 @@ land_vs_naval = {
 		sea_cost_on_distance_from_capital = -3 #
 		global_maritime_presence_modifier = 0.3
 
-		trade_sea_movement_cost_modifier = -0.2 # -0.10
-		trade_land_movement_cost_modifier = 0.25 # 0.5
-		num_naval_governors = 1.5
+		trade_sea_efficiency = 0.25 # 0.20
+		trade_land_efficiency = -0.2 # -0.5
+		num_naval_governors = 1.5 #
 
 		bias_for_colonialist_policies = 100
 	}
@@ -470,4 +467,29 @@ mysticism_vs_jurisprudence = {
 		clergy_estate_target_satisfaction = large_permanent_target_satisfaction
 	}
 
+}
+
+
+##############################################
+latinization_vs_hellenization = {
+	content_priority = 900
+	allow = {
+		has_dlc = "d008_fate_of_the_phoenix"
+		has_or_had_tag = BYZ
+	}
+
+	left_modifier = { #Latinitas
+		diplomatic_spending_cost = -0.2
+		selling_efficiency = small_trade_efficiency_bonus
+		allow_roman_movement = yes
+		monthly_towards_humanist = societal_value_monthly_move
+		monthly_towards_innovative = societal_value_monthly_move
+	}
+
+	right_modifier = { #Rhomanismos
+		stability_cost = -0.20
+		tolerance_own = 0.5
+		monthly_towards_spiritualist = societal_value_monthly_move
+		monthly_towards_traditionalist = societal_value_monthly_move
+	}
 }

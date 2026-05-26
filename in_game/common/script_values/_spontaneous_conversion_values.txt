@@ -21,11 +21,11 @@
 
 	if = {
 		limit = { location_rank = location_rank:rural_settlement }
-		multiply = 0.25
+		multiply = 0.5
 	}
 	else_if = {
 		limit = { location_rank = location_rank:town }
-		multiply = 0.5
+		multiply = 0.75
 	}
 
 	multiply = 0.002 # per month base speed
@@ -55,11 +55,11 @@ sc_assimilation_final_scale = {
 
 	if = {
 		limit = { location_rank = location_rank:rural_settlement }
-		multiply = 0.25
+		multiply = 0.5
 	}
 	else_if = {
 		limit = { location_rank = location_rank:town }
-		multiply = 0.5
+		multiply = 0.75
 	}
 
 	# multiply = {

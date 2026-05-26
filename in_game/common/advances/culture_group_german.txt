@@ -14,6 +14,7 @@ swabian_league_of_cities = {
 				culture = { has_culture_group = culture_group:german_group }
 				has_accepted_culture = culture:swabian
 			}
+			culture = { merged_culture_group_contains_culture = culture:swabian }
 		}
 	}
 	global_burghers_city_desired_pop = 0.25
@@ -40,6 +41,9 @@ westphalian_monastic_traditions = {
 					has_accepted_culture = culture:eastphalian
 				}
 			}
+			culture = { merged_culture_group_contains_culture = culture:westphalian }
+			culture = { merged_culture_group_contains_culture = culture:angrian }
+			culture = { merged_culture_group_contains_culture = culture:eastphalian }
 		}
 	}
 	global_clergy_max_literacy = 5
@@ -65,6 +69,9 @@ north_german_hanseatic_traditions = {
 					has_accepted_culture = culture:hanseatic
 				}
 			}
+			culture = { merged_culture_group_contains_culture = culture:lower_saxon }
+			culture = { merged_culture_group_contains_culture = culture:holsatian }
+			culture = { merged_culture_group_contains_culture = culture:hanseatic }
 		}
 	}
 	global_merchant_capacity_modifier = 0.25
@@ -91,6 +98,9 @@ custom_union_of_the_rhine = {
 					has_accepted_culture = culture:ripuarian_franconian
 				}
 			}
+			culture = { merged_culture_group_contains_culture = culture:moselle_franconian }
+			culture = { merged_culture_group_contains_culture = culture:rhine_franconian }
+			culture = { merged_culture_group_contains_culture = culture:ripuarian_franconian }
 		}
 	}
 	unlock_policy = custom_union_of_the_rhine_policy
@@ -150,6 +160,10 @@ german_baltic_sailors = {
 					has_accepted_culture = culture:eastern_pomeranian
 				}
 			}
+			culture = { merged_culture_group_contains_culture = culture:western_pomeranian }
+			culture = { merged_culture_group_contains_culture = culture:holsatian }
+			culture = { merged_culture_group_contains_culture = culture:hanseatic }
+			culture = { merged_culture_group_contains_culture = culture:eastern_pomeranian }
 		}
 	}
 	naval_morale_modifier = 0.2
@@ -172,6 +186,8 @@ franconian_proud_knights = {
 					has_accepted_culture = culture:east_franconian
 				}
 			}
+			culture = { merged_culture_group_contains_culture = culture:rhine_franconian }
+			culture = { merged_culture_group_contains_culture = culture:east_franconian }
 		}
 	}
 	monthly_army_tradition = 0.05
@@ -232,7 +248,7 @@ german_mountain_toll_castle_advance = {
 german_populating_the_countryside = {
 	age = age_3_discovery
 	icon = serbian_mining
-	
+
 	potential = {
 		OR = {
 			culture = culture:saxon
@@ -249,6 +265,10 @@ german_populating_the_countryside = {
 					has_accepted_culture = culture:german_silesian
 				}
 			}
+			culture = { merged_culture_group_contains_culture = culture:saxon }
+			culture = { merged_culture_group_contains_culture = culture:brandenburgish }
+			culture = { merged_culture_group_contains_culture = culture:markish }
+			culture = { merged_culture_group_contains_culture = culture:german_silesian }
 		}
 	}
 	global_migration_speed_modifier = 0.1
@@ -302,10 +322,11 @@ swabian_frugal_people = {
 				culture = { has_culture_group = culture_group:german_group }
 				has_accepted_culture = culture:swabian
 			}
+			culture = { merged_culture_group_contains_culture = culture:swabian }
 		}
 	}
 	bank_interest = -0.01
-	court_spending_cost = -0.02
+	court_spending_cost_modifier = -0.05
 
 	requires = gov_reform_reformation_a
 }
@@ -326,6 +347,8 @@ franconian_wine_bottles = {
 					has_accepted_culture = culture:east_franconian
 				}
 			}
+			culture = { merged_culture_group_contains_culture = culture:rhine_franconian }
+			culture = { merged_culture_group_contains_culture = culture:east_franconian }
 		}
 	}
 	global_wine_output_modifier = 0.2
@@ -342,7 +365,7 @@ german_fair_towns = {
 		has_or_had_tag = GER
 	}
 	trade_range_modifier = 0.1
-	merchant_maintenance_cost = -0.1
+	merchant_maintenance_efficiency = 0.2
 }
 
 ############################
@@ -470,7 +493,10 @@ noble_society_cologne = {
 saxon_defensioner = {
 	age = age_4_reformation
 	potential = {
-		culture = culture:saxon
+		OR = {
+			culture = culture:saxon
+			culture = { merged_culture_group_contains_culture = culture:saxon }
+		}
 	}
 	unlock_unit = a_saxon_defensioner
 	
@@ -500,7 +526,10 @@ bavarian_jager = {
 hesse_jager = {
 	age = age_4_reformation
 	potential = {
-		culture = culture:rhine_franconian
+		OR = {
+			culture = culture:rhine_franconian
+			culture = { merged_culture_group_contains_culture = culture:rhine_franconian }
+		}
 	}
 	unlock_unit = a_hesse_jager
 
@@ -509,6 +538,7 @@ hesse_jager = {
 
 austrian_grenzhussar = {
 	age = age_6_revolutions
+	content_priority = 900
 	potential = {
 		has_or_had_tag = HAB
 	}
@@ -538,6 +568,8 @@ gebirgsschutzen_infantry = {
 			culture = culture:southern_bavarian
 			culture = culture:danube_bavarian
 			is_swiss_for_advances = yes
+			culture = { merged_culture_group_contains_culture = culture:southern_bavarian }
+			culture = { merged_culture_group_contains_culture = culture:danube_bavarian }
 		}
 	}
 	unlock_unit = a_gebirgsschutzen_infantry

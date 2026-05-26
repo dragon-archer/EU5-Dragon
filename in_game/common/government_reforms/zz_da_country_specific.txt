@@ -34,7 +34,7 @@ REPLACE_OR_CREATE:pru_unified_legal_system = {
 		# new
 		government_size = 1
 		global_distance_from_capital_speed_propagation = 0.1
-		merchant_maintenance_cost = -0.2
+		merchant_maintenance_efficiency = 0.25
 		monthly_towards_centralization = societal_value_monthly_move
 	}
 	years = 2

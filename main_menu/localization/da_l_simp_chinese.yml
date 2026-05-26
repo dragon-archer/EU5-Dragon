@@ -7,6 +7,8 @@
  STATIC_MODIFIER_DESC_da_research_speed_from_university: "额外[research_progress|E]=sqrt($university$数量*0.1)"
  da_cb_border_conflict: "边境冲突"
  da_cb_border_conflict_desc: "这块地离我们那么近，让我们代你管理吧！"
+ da_tt_fort_town_above_or_capital: "该地[location_rank|e]在#color_yellow $town$#!及以上或是[capital|e]"
+ da_tt_fort_only_one_in_province: "我国在该[province|e]内没有建有任一#color_yellow 提供要塞等级#!的[fort|e]"
 
  # Brandenburg flavor:
  ## replace

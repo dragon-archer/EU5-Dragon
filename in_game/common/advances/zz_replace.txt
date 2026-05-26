@@ -17,7 +17,7 @@ REPLACE:benefits_for_mercenaries = {
 	for = mil # adm
 
 	requires = recruitment_improvements_renaissance # debt_and_loans
-	mercenary_maintenance_cost = -0.15
+	mercenary_maintenance_efficiency = 0.1
 }
 
 REPLACE:organised_mercenary_recruitment = {
@@ -79,7 +79,8 @@ REPLACE:finest_of_horses = {
 	icon = finest_of_horses
 	for = mil
 
-	army_cavalry_power = 0.1
+	army_heavy_cavalry_power = 0.1
+	army_light_cavalry_power = 0.1
 
 	requires = regular_levy_training # tolerance_idea
 }
@@ -155,7 +156,7 @@ REPLACE:devotio_moderna = {
 		religion.group = religion_group:christian
 	}
 
-	court_spending_cost = -0.01
+	court_spending_cost_modifier = -0.05
 
 	requires = renaissance_subject_opinions_advance
 }

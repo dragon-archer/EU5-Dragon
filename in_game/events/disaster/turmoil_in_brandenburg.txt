@@ -78,6 +78,7 @@ turmoil_in_brandenburg.1 = {
 			}
 		}
 	}
+	outcome = neutral
 
 	immediate = {
 		bra_set_localization_scopes = yes
@@ -118,6 +119,7 @@ turmoil_in_brandenburg.2 = {
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 
 	desc = turmoil_in_brandenburg.2.desc
+	outcome = neutral
 	fire_only_once = yes
 	trigger = {
 		any_active_disaster = {
@@ -163,6 +165,7 @@ turmoil_in_brandenburg.3 = {
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 
 	desc = turmoil_in_brandenburg.3.desc
+	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = BRA
@@ -222,6 +225,7 @@ turmoil_in_brandenburg.4 = {
 	title = turmoil_in_brandenburg.4.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.4.desc
+	outcome = neutral
 	trigger = {
 		any_active_disaster = {
 			disaster_type = disaster_type:turmoil_in_brandenburg
@@ -271,6 +275,7 @@ turmoil_in_brandenburg.5 = {
 	title = turmoil_in_brandenburg.5.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.5.desc
+	outcome = neutral
 	#Support the Wittelsbacher
 	trigger = {
 		any_active_disaster = {
@@ -284,7 +289,6 @@ turmoil_in_brandenburg.5 = {
 		}
 	}
 	immediate = {
-		
 		if = {
 			limit = {
 				NOT = { any_rebel = { rebel_name_key = bra_peasants_revolt } }
@@ -352,6 +356,7 @@ turmoil_in_brandenburg.6 = {
 	title = turmoil_in_brandenburg.6.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.6.desc
+	outcome = neutral
 	#Support the Wittelsbacher
 	trigger = {
 		any_active_disaster = {
@@ -392,6 +397,7 @@ turmoil_in_brandenburg.7 = {
 	title = turmoil_in_brandenburg.7.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.7.desc
+	outcome = neutral
 	#Support the Wittelsbacher
 	trigger = {
 		any_active_disaster = {
@@ -445,6 +451,7 @@ turmoil_in_brandenburg.8 = {	#The Private Domain of <Noble Character>
 	title = turmoil_in_brandenburg.8.title
 	desc = turmoil_in_brandenburg.8.desc
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	outcome = neutral
 	trigger = {
 		any_character = {
 			is_ruler = no
@@ -587,6 +594,7 @@ turmoil_in_brandenburg.9 = {	#The Noble League of <province>
 	title = turmoil_in_brandenburg.9.title
 	desc = turmoil_in_brandenburg.9.desc
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	outcome = neutral
 	trigger = {
 		any_province = {
 			NOT = {
@@ -723,6 +731,7 @@ turmoil_in_brandenburg.10 = {	#Nobles Levy Illegal Tolls in <location>
 	title = turmoil_in_brandenburg.10.title
 	desc = turmoil_in_brandenburg.10.desc
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	outcome = neutral
 	trigger = {
 		any_owned_location = {
 			is_capital = no
@@ -779,6 +788,7 @@ turmoil_in_brandenburg.11 = {	#Noble Family Clashes With Our Dynasty
 	title = turmoil_in_brandenburg.11.title
 	desc = turmoil_in_brandenburg.11.desc
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	outcome = neutral
 	trigger = {
 
 		ruler = {
@@ -870,6 +880,7 @@ turmoil_in_brandenburg.12 = {	#Investment in <location>
 	title = turmoil_in_brandenburg.12.title
 	desc = turmoil_in_brandenburg.12.desc
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	outcome = neutral
 	trigger = {
 		any_province = {
 			province_average_control > 0
@@ -953,6 +964,7 @@ turmoil_in_brandenburg.13 = {	#The Growth of <Location>
 	title = turmoil_in_brandenburg.13.title
 	desc = turmoil_in_brandenburg.13.desc
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	outcome = neutral
 	trigger = {
 		at_war = no
 		any_owned_location = {
@@ -1111,21 +1123,8 @@ turmoil_in_brandenburg.100 = {
 	title = turmoil_in_brandenburg.100.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.100.desc
+	outcome = neutral
 	fire_only_once = yes
-	dynamic_historical_event = {
-		tag = BRA
-		from = 1300.1.1
-		to = 1800.1.1
-		monthly_chance = 100
-	}
-	trigger = {
-		has_ruler = yes
-		any_active_disaster = {
-			disaster_type = disaster_type:turmoil_in_brandenburg
-		}
-		var:bra_wittelsbacher_investment_var >= 100
-		has_variable = PRU_robber_barons_not_active
-	}
 	immediate = {
 		ruler ?= {
 			save_scope_as = target_character
@@ -1153,6 +1152,7 @@ turmoil_in_brandenburg.200 = { #GRAVEYARD
 	title = turmoil_in_brandenburg.200.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.200.desc
+	outcome = neutral
 	fire_only_once = yes
 	trigger = {
 		has_variable = bra_fake_waldemar_on_throne
@@ -1186,6 +1186,7 @@ turmoil_in_brandenburg.300 = {
 	title = turmoil_in_brandenburg.300.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.300.desc
+	outcome = neutral
 	fire_only_once = yes
 
 	immediate = {
@@ -1225,6 +1226,7 @@ turmoil_in_brandenburg.1000 = {
 			}
 		}
 	}
+	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = BRA
@@ -1357,7 +1359,8 @@ turmoil_in_brandenburg.1000 = {
 	option = {
 		name = turmoil_in_brandenburg.1000.b
 		add_legitimacy = legitimacy_severe_penalty
-		hidden_effect = {
+		custom_tooltip = {
+			text = turmoil_in_brandenburg.1000.b.tt
 			set_variable = { name = bra_executing_false_waldemar value = random_integer }
 			change_variable = { name = bra_executing_false_waldemar modulo = 5 }
 			destroy_rebel = scope:false_waldemar_rebel
@@ -1421,6 +1424,7 @@ turmoil_in_brandenburg.1001 = {
 			}
 		}
 	}
+	outcome = neutral
 	trigger = {
 		exists = character:false_waldemar
 		character:false_waldemar = { is_alive = yes }
@@ -1585,6 +1589,7 @@ turmoil_in_brandenburg.1002 = {
 			}
 		}
 	}
+	outcome = neutral
 	trigger = {
 		exists = character:false_waldemar
 		character:false_waldemar = { is_alive = yes }
@@ -1694,6 +1699,7 @@ turmoil_in_brandenburg.1003 = {
 			}
 		}
 	}
+	outcome = neutral
 	trigger = {
 		exists = character:false_waldemar
 		character:false_waldemar = { is_alive = yes }
@@ -1739,6 +1745,7 @@ turmoil_in_brandenburg.1004 = { #PRISON
 		10 = happy
 	}
 	desc = turmoil_in_brandenburg.1004.desc
+	outcome = neutral
 	trigger = {
 		exists = character:false_waldemar
 		character:false_waldemar = { is_alive = yes }
@@ -1768,6 +1775,7 @@ turmoil_in_brandenburg.1004 = { #PRISON
 	#[target_character.GetHisHer|U] abilities might actually come in handy to us...
 	option = {
 		name = turmoil_in_brandenburg.1004.c
+		custom_tooltip = turmoil_in_brandenburg.1004.c.tt
 		scope:target_character = {
 			remove_character_allegiance = yes
 			move_country = root
@@ -1788,6 +1796,7 @@ turmoil_in_brandenburg.1005 = {
 	title = turmoil_in_brandenburg.1005.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.1005.desc
+	outcome = neutral
 
 	trigger = {
 		has_variable = bra_fake_waldemar_on_throne
@@ -1832,6 +1841,7 @@ turmoil_in_brandenburg.1006 = {
 			}
 		}
 	}
+	outcome = neutral
 	trigger = {
 		has_variable = bra_fake_waldemar_on_throne
 		character:false_waldemar = { is_alive = yes }
@@ -1934,6 +1944,7 @@ turmoil_in_brandenburg.1007 = { #PRISON #GRAVEYARD
 			}
 		}
 	}
+	outcome = neutral
 
 	immediate = {
 		if = {
@@ -2043,6 +2054,7 @@ turmoil_in_brandenburg.1100 = {
 	title = turmoil_in_brandenburg.1100.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.1100.desc
+	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = BRA
@@ -2105,6 +2117,7 @@ turmoil_in_brandenburg.1101 = {
 	title = turmoil_in_brandenburg.1101.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.1101.desc
+	outcome = neutral
 	immediate = {
 		if = {
 			limit = {
@@ -2223,6 +2236,7 @@ turmoil_in_brandenburg.1102 = {
 			}
 		}
 	}
+	outcome = neutral
 	immediate = {
 	}
 	option = {
@@ -2266,6 +2280,7 @@ turmoil_in_brandenburg.1103 = {
 			}
 		}
 	}
+	outcome = neutral
 
 	immediate = {
 	}
@@ -2310,6 +2325,7 @@ turmoil_in_brandenburg.1104 = {
 			}
 		}
 	}
+	outcome = neutral
 	immediate = {
 	}
 
@@ -2365,6 +2381,7 @@ turmoil_in_brandenburg.1105 = {
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 
 	desc = turmoil_in_brandenburg.1105.desc
+	outcome = neutral
 	immediate = {
 		# Choose a proper father for Friedrich
 		dynasty:hohenzollern_dynasty ?= {
@@ -2441,6 +2458,7 @@ turmoil_in_brandenburg.1106 = {
 	title = turmoil_in_brandenburg.1106.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.1106.desc
+	outcome = neutral
 
 	immediate = {
 	}
@@ -2460,6 +2478,7 @@ turmoil_in_brandenburg.1107 = {
 	title = turmoil_in_brandenburg.1107.title
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.1107.desc
+	outcome = neutral
 
 	immediate = {
 	}
@@ -2501,6 +2520,7 @@ turmoil_in_brandenburg.1200 = {
 		}
 	}
 	desc = turmoil_in_brandenburg.1200.desc
+	outcome = neutral
 	immediate = {
 		create_character = {
 			first_name = name_frederick
@@ -2557,6 +2577,7 @@ turmoil_in_brandenburg.1201 = {
 		10 = armed
 	}
 	desc = turmoil_in_brandenburg.1201.desc
+	outcome = neutral
 
 	option = {
 		name = turmoil_in_brandenburg.1201.a
@@ -2610,6 +2631,7 @@ turmoil_in_brandenburg.1300 = {
 	title = turmoil_in_brandenburg.1300.title
 	desc = turmoil_in_brandenburg.1300.desc
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	outcome = neutral
 
 	dynamic_historical_event = {
 		tag = BRA
@@ -2663,6 +2685,7 @@ turmoil_in_brandenburg.1301  = {
 	category = disaster_event
 	title = turmoil_in_brandenburg.1301.title
 	desc = turmoil_in_brandenburg.1301.desc
+	outcome = neutral
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 
 	trigger = {
@@ -2696,6 +2719,7 @@ turmoil_in_brandenburg.1302  = {
 	category = disaster_event
 	title = turmoil_in_brandenburg.1302.title
 	desc = turmoil_in_brandenburg.1302.desc
+	outcome = neutral
 	historical_info = turmoil_in_brandenburg.1302.historical_info
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	fire_only_once = yes
@@ -2821,12 +2845,13 @@ turmoil_in_brandenburg.1303  = {
 	category = disaster_event
 	title = turmoil_in_brandenburg.1303.title
 	desc = turmoil_in_brandenburg.1303.desc
+	outcome = neutral
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = BRA
 		tag = PRU
-		from = 1340.1.1 # 1380.1.1
+		from = 1340.1.1 # 1372.1.1
 		to = 1821.1.1 #Robber baron issue must be able to be resolved
 		monthly_chance = 20
 	}
@@ -2855,6 +2880,19 @@ turmoil_in_brandenburg.1303  = {
 		every_province = {
 			remove_province_modifier = PRU_robber_barons
 			remove_variable = pru_has_had_robber_barons
+		}
+		if = {
+			limit = {
+				ruler_or_heir_if_regent ?= {
+					dynasty = dynasty:wittelsbach_dynasty
+				}
+				has_variable = bra_wittelsbacher_investment_var
+				var:bra_wittelsbacher_investment_var >= 100
+			}
+			trigger_event_non_silently = {
+				id = turmoil_in_brandenburg.100
+				days = 2
+			}
 		}
 	}
 
@@ -2887,6 +2925,7 @@ turmoil_in_brandenburg.1304  = {
 	category = disaster_event
 	title = turmoil_in_brandenburg.1304.title
 	desc = turmoil_in_brandenburg.1304.desc
+	outcome = neutral
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	fire_only_once = yes
 

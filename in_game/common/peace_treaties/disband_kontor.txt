@@ -8,7 +8,7 @@
 		}
 	}
 
-	base_antagonism = 0 # 1
+	base_antagonism = 0.2 # 1
 	antagonism_type = antagonism_disband_kontor
 
 	potential = {
@@ -40,7 +40,7 @@
 
 	effect = {
 		scope:target = {
-			destroy_building_forcefully = "building(building_type:hanseatic_kontor|scope:loser)"
+			destroy_building_forcefully = "building(building_type:hanseatic_kontor|scope:recipient)"
 		}
 	}
 
