@@ -62,6 +62,36 @@ REPLACE:building_levels = {
 	local_monthly_development = 0.00005 #
 }
 
+REPLACE:parl_royal_roads_mod = {
+	game_data = { category = country }
+	road_cost_on_distance_from_capital = -2 # -0.10
+	global_distance_from_capital_speed_propagation = 0.10
+}
+
+REPLACE:parl_mountain_passes_mod = {
+	game_data = { category = country }
+	land_cost_on_distance_from_capital = -4 # -0.10
+	global_distance_from_capital_speed_propagation = 0.05
+}
+
+REPLACE:parl_parish_waypoints_mod = {
+	game_data = { category = country }
+	land_cost_on_distance_from_capital = -2 # -0.05
+	global_distance_from_capital_speed_propagation = 0.10
+}
+
+REPLACE:parl_coastal_posts_mod = {
+	game_data = { category = country }
+	sea_cost_on_distance_from_capital = -3 # -0.10
+	port_cost_distance_from_capital = -4 # -0.10
+}
+
+REPLACE:parl_road_corvee_mod = {
+	game_data = { category = country }
+	land_cost_on_distance_from_capital = -3 # -0.08
+	global_distance_from_capital_speed_propagation = 0.05
+}
+
 INJECT:development = {
 	free_building_levels = 1 # total is 2
 }
