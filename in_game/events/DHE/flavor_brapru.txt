@@ -2057,7 +2057,7 @@ flavor_brapru.30 = {
 
 		add_country_modifier = {
 			modifier = PRU_fabrication
-			years = 25
+			years = 10 # 25
 			mode = extend #Should extend beyond 25 years
 		}
 	}
@@ -2072,7 +2072,8 @@ flavor_brapru.30 = {
 			}
 			drop_antagonism_bomb = {
 				target = scope:pomeranian_target.capital
-				modifier = antagonism_defused_border_disputes
+				modifier = antagonism_peace_treaty_demands
+				value = -10
 			}
 		}
 		change_societal_value = {
