@@ -1,4 +1,7 @@
-﻿# For tooltip
+﻿# replace
+MIN_DAYS_AS_SUBJECT_FOR_ENFORCEMENT = 1825 # 3650
+
+# For tooltip
 num_of_advances_researched_sv = {
 	value = num_of_advances_researched
 }

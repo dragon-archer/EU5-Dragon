@@ -92,6 +92,18 @@ REPLACE:parl_road_corvee_mod = {
 	global_distance_from_capital_speed_propagation = 0.05
 }
 
+REPLACE:is_subject = {
+	game_data = {
+		category = country
+	}
+
+	pop_join_rebel_threshold = -0.1
+	global_estate_target_satisfaction = large_permanent_target_satisfaction
+	# global_pop_assimilation_speed_modifier = -0.5
+	# global_pop_conversion_speed_modifier = -0.5
+
+}
+
 INJECT:development = {
 	free_building_levels = 1 # total is 2
 }
