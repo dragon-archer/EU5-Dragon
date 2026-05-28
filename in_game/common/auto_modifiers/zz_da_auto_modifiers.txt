@@ -1,4 +1,8 @@
-﻿REPLACE:num_locations_impact = {
+﻿INJECT:country_base_values = {
+	diplomatic_spending_cost = -0.1
+}
+
+REPLACE:num_locations_impact = {
 	scales_with = {
 		value = num_locations
 		divide = 15 # 10
