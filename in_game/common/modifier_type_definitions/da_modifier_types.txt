@@ -1,0 +1,7 @@
+﻿REPLACE:antagonism_monthly_change_modifier={
+	percent=yes
+	color=good
+	game_data={
+		category=country
+	}
+}
