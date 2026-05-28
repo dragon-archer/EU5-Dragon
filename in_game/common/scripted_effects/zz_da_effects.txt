@@ -1,4 +1,37 @@
-﻿# Input: var, variable name
+﻿REPLACE:enforce_culture_effect = {
+	$target$ = {
+		change_culture = $actor$.culture
+		add_cooldown = {
+			type = convert_culture
+			years = 2 # 10
+		}
+		every_cabinet = {
+			limit = {
+				has_cabinet_action = yes
+				or = {
+					cabinet_action = cabinet_action:assimilate_area
+					cabinet_action = cabinet_action:promote_culture
+				}
+			}
+			stop_cabinet_action = {}
+		}
+		capital = {
+			every_pop = {
+				limit = {
+					NOT = {
+						culture = $actor$.culture
+					}
+				}
+				split_pop = {
+					fraction = 0.16
+					culture = $actor$.culture
+				}
+			}
+		}
+	}
+}
+
+# Input: var, variable name
 da_sqrt = {
 	if = {
 		limit = {
