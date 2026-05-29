@@ -120,7 +120,7 @@
 	}
 
 	# Measles burns through susceptibles fast; new unimmunized generations make it endemic every ~15 years
-	monthly_resistance_reduction = 0.002
+	monthly_resistance_reduction = 0.001 # 0.002
 
 	#script value for mortality rate of the disease (0..1)
 	# 1–2 in 1,000 will die
