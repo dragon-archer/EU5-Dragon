@@ -1,7 +1,7 @@
 ﻿INJECT:burghers_estate = {
 	#multiplied with (satisfaction - LOW_SATISFACTION_THRESHOLD)
 	satisfaction = {
-		selling_efficiency = large_trade_efficiency_bonus # 0.05 at 100%
+		selling_efficiency = medium_trade_efficiency_bonus # 0.025 at 100%
 		global_production_efficiency = medium_production_efficiency_bonus # with already existing bonuses, 0.05 at 100%
 	}
 }

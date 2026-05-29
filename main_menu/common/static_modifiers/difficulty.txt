@@ -93,7 +93,7 @@ difficulty_ai_hard = {
 	tax_income_efficiency = large_tax_income_efficiency_bonus
 	research_speed_modifier = 0.1
 	global_estate_target_satisfaction = 0.1
-	selling_efficiency = medium_trade_efficiency_bonus
+	selling_efficiency = 0.01 # medium_trade_efficiency_bonus
 	global_estate_satisfaction_recovery = 0.002
 	global_population_growth = 0.0005
 	global_pop_food_consumption = -0.1
@@ -114,7 +114,7 @@ difficulty_ai_very_hard = {
 	tax_income_efficiency = 0.2
 	research_speed_modifier = 0.2
 	global_estate_target_satisfaction = 0.25
-	selling_efficiency = large_trade_efficiency_bonus
+	selling_efficiency = 0.025 # large_trade_efficiency_bonus
 	global_estate_satisfaction_recovery = 0.003
 
 	global_population_growth = 0.001
