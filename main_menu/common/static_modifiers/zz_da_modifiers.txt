@@ -104,6 +104,13 @@ REPLACE:is_subject = {
 
 }
 
+REPLACE:monumental_architecture = {
+	game_data = {
+		category = location
+	}
+	local_monthly_development = 0.005 # 0.05
+}
+
 INJECT:development = {
 	free_building_levels = 1 # total is 2
 }
