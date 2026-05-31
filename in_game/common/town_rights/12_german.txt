@@ -35,14 +35,14 @@ magdeburg_rights_town_rights = {
 lubeck_town_rights = {
 	kept_at_conquest = no
 	location_modifier = {
-		local_maritime_presence = 0.1
-		harbor_suitability = 0.2
-		local_marketplace_building_levels = 10
+		local_maritime_presence = 0.15 # 0.1
+		harbor_suitability = 0.3 # 0.2
+		local_marketplace_building_levels = 5 # 10
 	}
 
-	country_modifier = {
-		burghers_estate_agenda_impact = -0.1
-	}
+	# country_modifier = {
+	# 	burghers_estate_agenda_impact = -0.1
+	# }
 
 	potential = {
 		culture = {

@@ -3073,7 +3073,7 @@ flavor_brapru.1100 = { #Construction of Berlin Palace
 		has_ruler = yes
 		location:berlin = {
 			is_capital = yes
-			num_civil_constructions < 1
+			# num_civil_constructions < 1 #DA
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city

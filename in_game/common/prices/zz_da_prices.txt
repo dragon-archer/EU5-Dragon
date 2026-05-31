@@ -6,3 +6,7 @@
 REPLACE:deselect_expensive_child_education = {
 	government_power = 2.5 # 5
 }
+
+capital_movement_subject = {
+	scaled_gold = 1
+}

@@ -34,6 +34,7 @@ REPLACE:army_tradition = {
 	land_morale_modifier = 0.2
 	siege_ability = 0.2 # 0.1
 	monthly_karma = -0.1
+	experience_decay = -0.01 #
 
 	monthly_towards_land = societal_value_large_monthly_move # societal_value_monthly_move
 }
@@ -46,6 +47,7 @@ REPLACE:navy_tradition = {
 
 	naval_morale_modifier = 0.2
 	global_maritime_presence_modifier = 1.0 # 0.5
+	experience_decay = -0.01 #
 
 	monthly_towards_naval = societal_value_large_monthly_move # societal_value_monthly_move
 }
