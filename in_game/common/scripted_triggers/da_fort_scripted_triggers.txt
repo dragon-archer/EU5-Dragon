@@ -5,7 +5,6 @@
 		has_building = building_type:bastion
 		has_building = building_type:star_fort
 		has_building = building_type:fortress
-		has_building = building_type:city_walls
 		has_building = building_type:ruined_great_wall_of_china
 		has_building = building_type:repaired_great_wall_of_china
 		has_building = building_type:theodosian_walls

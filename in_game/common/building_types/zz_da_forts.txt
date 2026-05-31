@@ -271,7 +271,6 @@ REPLACE:city_walls = {
 
 	allow = {
 		NOT = { has_building = building_type:theodosian_walls }
-		da_location_can_build_fort_trigger = yes
 	}
 	
 
