@@ -185,7 +185,8 @@ belligerent_vs_conciliatory = {
 	left_modifier = {
 		global_war_score_efficiency = 0.25
 		spy_network_construction = 0.25 # 0.1
-		army_tradition_decay = -0.0025 #
+		army_tradition_decay = -0.002 #
+		navy_tradition_decay = -0.002 #
 
 		casus_belli_creation_speed_modifier = 0.5 # 0.33
 		shared_border_impact = 2.0
@@ -202,7 +203,7 @@ belligerent_vs_conciliatory = {
 	}
 	right_modifier = {
 		diplomatic_reputation = diplomatic_reputation_severe_bonus
-		country_cabinet_efficiency = 0.15 # 0.10
+		country_cabinet_efficiency = 0.2 # 0.10
 
 		casus_belli_creation_speed_modifier = -0.33
 		shared_border_impact = -0.75
