@@ -137,7 +137,7 @@
 		# Prestige penalty for marrying an undesirable spouse
 		if = {
 			limit = {
-				scope:target = { modifier:marriage_desirability < 0 }
+				scope:target ?= { modifier:marriage_desirability < 0 } #DA
 			}
 			scope:actor = {
 				add_prestige = {
