@@ -135,6 +135,10 @@ INJECT:average_literacy = {
 	research_speed = 0.5
 }
 
+INJECT:prosperity = {
+	local_monthly_development_modifier = 0.25
+}
+
 ######## NEW
 
 spontaneous_conversion_modifier = {
