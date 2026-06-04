@@ -75,3 +75,28 @@ INJECT:bureaucracy_law = {
 		years = 2
 	}
 }
+
+INJECT:cultural_traditions_law = {
+	pietism_society = { #prussian virtues
+		unique = yes
+		potential = {
+			OR = {
+				has_or_had_tag = PRU
+				has_or_had_tag = BRA
+			}
+			has_unlocked_policy_trigger = { type = pietism_society }
+		}
+		country_modifier = {
+			monthly_towards_humanist = societal_value_monthly_move
+			# stability_decay = -0.00025
+			# global_monthly_control = 0.002
+			global_production_efficiency = small_production_efficiency_bonus
+			global_estate_max_tax = 0.025
+			global_estate_target_satisfaction = small_permanent_target_satisfaction
+		}
+		estate_preferences = {
+			clergy_estate
+		}
+		years = 2
+	}
+}
